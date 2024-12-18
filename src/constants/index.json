@@ -4,7 +4,7 @@
         "id": "1",
         "src": "./projectsImages/PlasticsImage.png",
         "title": "Portfolio",
-        "description": "My personal portfolio - A responsive and visually engaging portfolio website built to showcase my skills, projects, and achievements. ",
+        "description": "A responsive and visually engaging portfolio website built to showcase my skills, projects, and achievements. ",
         "githublink":"https://github.com/danieldany09/personal-portfolio"
       },
       {
@@ -30,6 +30,42 @@
     "githubLink":"https://github.com/danieldany09/",
     "linkedInLink":"https://www.linkedin.com/in/danielrajav",
     "leetcodeLink":"https://leetcode.com/daniel0902/",
-    "instagramLink":"https://www.instagram.com/v_________dr/"
+    "instagramLink":"https://www.instagram.com/v_________dr/",
+     "experiences" : [
+      {
+        "company": "SurveySparrow",
+        "role": "Software Engineer",
+        "period": "Apr 2024 - Present",
+        "description": "I have worked on MultiProduct Billing Service Squad In which we integrate multiple product billing module to our backend service(micro-service architechture). I had a oppurtunity to build multiple features for our payment integration",
+        "techStack": ["React", "Nest.js", "TypeScript", "JavaScript", "Docker","Redis", "Git"]
+      },
+      {
+        "company": "SurveySparrow",
+        "role": "Software Engineer - Intern",
+        "period": "Feb 2024 - Apr 2022",
+        "description": "I had the opportunity to work on a variety of tasks related to backend development,frontend development, database management. Throughout the internship, I gained hands-on experience with key technologies and best practices in modern software development.",
+        "techStack": ["React", "Nest.js", "TypeScript", "JavaScript", "Docker","Redis", "Git"]
+      }
+    ],
+    "education" : [
+      {
+        "institution": "Kongu Engineering College - Erode",
+        "degree": "B.Tech in Information Technology",
+        "period": "2020-2024",
+        "percentage":89
+      },
+      {
+        "institution": "Sri Vishweswara Vidhyalaya MHSS - Coimbatore",
+        "degree": "HSC",
+        "period": "2019-2020",
+        "percentage":85
+      },
+      {
+        "institution": "Mahatma Montessori MHSS - Madurai",
+        "degree": "SSLC",
+        "period": "2017-2018",
+        "percentage":91.8
+      }
+    ]
   }
   

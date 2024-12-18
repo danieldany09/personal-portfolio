@@ -1,12 +1,12 @@
-import data from "../constants/index.json";
 import React  from 'react';
+import data from "../constants/index.json";
 export default function MyProjects() {
   return (
     <section className="portfolio--section" id="MyPortfolio">
       <div className="portfolio--container-box">
         <div className="portfolio--container">
           <p className="section--title">What I have developed...</p>
-          <h2 className="projects-section--heading">My Projects</h2>
+          <div className="section-header"><h2>My Projects</h2></div>
         </div>
         <div>
           <a href={data.githubLink} target="_blank">
