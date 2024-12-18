@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import data from "../constants/index.json";
+import { FaCode, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
@@ -17,11 +18,24 @@ const HeroSection = () => {
           Passionate and solution-oriented, I’m a software developer who thrives on finding creative ways to solve problems. I’m always looking for new opportunities to grow, innovate, and make things work better with code
           </p>
         </div>
-        <div>
+        <div className="hero--section--button">
         <a href='#AboutMe'>
             <button className="btn btn-primary">About Me </button>
         </a>
+        <a href='' target='_blank'>
+            <button className="btn btn-primary"> Open CV </button>
+        </a>
         </div>
+        <div>
+        </div>
+        <div className='hero--section--icons--list'>
+          <a href={data.githubLink} target='_blank'><FaGithub size='25px' className='hero--section--icon' /></a>
+          <a href={data.linkedInLink} target='_blank'><FaLinkedin size='25px' className='hero--section--icon' /></a>
+          <a href={data.leetcodeLink} target='_blank'><FaCode size='25px' className='hero--section--icon' /></a>
+          <a href={data.instagramLink} target='_blank'><FaInstagram size='25px' className='hero--section--icon' /></a>
+        </div>
+        
+        
       </div>
       <div className="hero--section--img">
         <img src="./img/herosection.png" alt="Hero Section" />

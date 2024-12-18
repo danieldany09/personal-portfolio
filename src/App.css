@@ -97,7 +97,7 @@ p {
 .btn-primary {
   color: var(--white);
   background-color: var(--primary);
-  border: 1px solid var(--primary);
+  border: 1px solid var(--primary); 
 }
 .btn-primary:hover {
   color: var(--primary);
@@ -143,6 +143,7 @@ h3 {
 
 a{
   text-decoration: none;
+  color:black
 }
 
 
@@ -207,6 +208,7 @@ a{
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 .navbar--items > ul {
   list-style: none;
@@ -305,9 +307,21 @@ a{
   font-weight: 400;
   line-height: 34px;
   
-  text-align: justify;
-  
-
+  text-align: justify !important;
+}
+.hero--section--button{
+  display: flex;
+  justify-content: center;
+  gap:10px;
+}
+.hero--section--icons--list{
+  display: flex;
+  justify-content: center;
+  padding: 20px 5px 2px;
+  gap:20px;
+}
+.hero--section--icon{
+  cursor: pointer;
 }
 .hero--section--img {
   display: flex;
@@ -326,6 +340,29 @@ a{
   border: 1px solid var(--primary);
   
 }
+.about--me--skills{
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+}
+.about--me--skill--tag{
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  gap:10px;
+  transition:  all 0.3s ease-in-out;
+}
+.about--me--skill--tag:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+  background-color:var(--primary);
+  color: white;
+}
+
 /* Hero Section Style Ends */
 
 /* Skills Section Style */
@@ -416,7 +453,7 @@ a{
 /* My Portfolio Starts */
 .portfolio--section {
   display: flex;
-  padding: 112px 85px;
+  padding: 85px 85px;
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
@@ -447,7 +484,8 @@ a{
 }
 .portfolio--section--img {
   border-radius: 8px;
-  width: 100%;
+  padding: 20px;
+
 }
 .portfolio--section--img > img {
   width: 100%;
@@ -457,18 +495,31 @@ a{
   flex-direction: column;
   align-items: flex-start;
   flex: 1 0 0;
-  
   background: #fff;
   box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  border-radius: 20px;
+  box-shadow:0 0 32px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+  overflow: hidden;
 }
+.portfolio--section--card:hover {
+  transform: scale(1.03);  /* Makes card 3% larger */
+  border-color: var(--github);   /* Shows teal border on hover */
+  box-shadow: 0 10px 40px rgba(0, 107, 106, 0.2);  /* Enhanced shadow */
+  overflow: hidden;
+  z-index: 1;
+}
+
 .portfolio--section--card--content {
   display: flex;
-  padding: 32px;
+  text-align: justify ;
+  padding: 20px;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   min-height: 200px;
 }
 .portfolio--section--title {
@@ -719,6 +770,14 @@ input[type="checkbox"] {
   .hero--section-title--highlightname{
     font-size: 20px;
   }
+  .portfolio--section {
+    display: flex;
+    padding: 30px 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
   .skills--section--container,
   .about--section,
   .portfolio--section--container,
@@ -778,6 +837,11 @@ input[type="checkbox"] {
   .divider {
     margin: 20px;
   }
+  .projects-section--heading{
+    font-size: 35px;
+    line-height: 40px;
+  }
+ 
 }
 
 /* Hamburger menu  */
@@ -803,6 +867,13 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 1200px) {
+  .navbar--items > ul {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    text-decoration: none;
+  }
   .nav__hamburger {
     display: flex;
     z-index: 200;

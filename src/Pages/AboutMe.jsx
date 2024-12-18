@@ -1,18 +1,33 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { FaCss3Alt, FaHtml5, FaJava, FaJs, FaNodeJs, FaReact,FaDocker } from 'react-icons/fa';
+import { SiNestjs,SiTypescript,SiMongodb,SiGoogleappsscript } from "react-icons/si";
+import { DiRedis } from "react-icons/di";
+import { PiFileSqlLight,PiGraph } from "react-icons/pi";
+import { MdOutlineComputer } from "react-icons/md";
+import { FaGitAlt } from "react-icons/fa";
 
+const skills = [
+  { name: 'HTML5', icon: <FaHtml5 /> },
+  { name: 'CSS3', icon: <FaCss3Alt /> },
+  { name: 'JavaScript', icon:  <FaJs/> },
+  {name:'TypeScript', icon:<SiTypescript/>},
+  { name: 'React', icon: <FaReact /> },
+  {name:'Nest.js', icon:<SiNestjs/>},
+  { name: 'Node.js', icon: <FaNodeJs /> },
+  { name: 'Java', icon: <FaJava/>},
+  {name:'AppsScript', icon:<SiGoogleappsscript/>},
+  { name: 'SQL', icon: <PiFileSqlLight /> },
+  { name: 'MongoDB', icon: <SiMongodb /> },
+  {name:'Redis',icon:<DiRedis/>},
+  {name:'Data Structures and algorithms ', icon:<PiGraph/>},
+  {name:'System Design ', icon:<MdOutlineComputer/>},
+  {name: 'Docker',icon:<FaDocker/>},
+  {name:'Git', icon:<FaGitAlt/>},
+
+
+];
 const AboutMe = () => {
-    const [resume,setResume] = useState(null);
-    useEffect(()=>{
-        axios.get(`https://script.google.com/macros/s/${process.env.REACT_APP_API_KEY}/exec?function=getResume`)
-        .then(response=>{
-            const resume = response.data;
-            setResume(resume[1]);
-        })
-        .catch(error=>{
-            console.log("There was an error fetching the resume data:", error)
-        })
-    },[]);
   return (
     <section id="AboutMe" className="about--section">
       <div className="about--section--img">
@@ -23,18 +38,22 @@ const AboutMe = () => {
           <p className="section--title">Who I Am...</p>
           <h1 className="skills--section--heading">FullStack Developer</h1>
           <p className="hero--section-description">
-            Solution Focused Full-Stack Developer with a strong focus on delivering efficient, high-quality solutions. Skilled in analyzing and solving complex problems while maintaining a commitment to collaboration and continuous learning. Passionate about developing scalable, performance-driven applications with a focus on user experience and usability. Constantly staying up-to-date with the latest technologies, tools, and best practices to build innovative and robust software solutions. Dedicated to writing clean, maintainable code and improving system functionality to meet the needs of both clients and end-users.
+            Solution Focused Full-Stack Developer with a strong focus on delivering efficient, high-quality solutions. Skilled in analyzing and solving complex problems while maintaining a commitment to collaboration and continuous learning. Constantly staying up-to-date with the latest technologies, tools, and best practices to build innovative and robust software solutions. Dedicated to writing clean, maintainable code and improving system functionality to meet the needs of both clients and end-users.
           </p>
-          <p className="hero--section-description">
-          
-          </p>
+          {/* skills */}
+          <h3>Skills</h3>
+      <div className="about--me--skills">
+      {skills.map((skill, index) => (
+         <div key={index} className="about--me--skill--tag">
+         {skill.icon} 
+         <span className="skill-name">{skill.name}</span> 
+       </div>
+      ))}
+    </div>
+          {/* skills */}
         </div>
-        <div>
-        <a href={resume} target='_blank'>
-            <button className="btn btn-primary"> Resume </button>
-        </a>
-        </div>
-      </div>
+        
+    </div>
     </section>
   )
 }
