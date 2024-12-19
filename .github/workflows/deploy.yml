@@ -22,7 +22,7 @@ jobs:
           node-version: 16
 
       - name: Install dependencies (force)
-        run: npm ci  # This will clean install dependencies from package-lock.json
+        run: npm install --force # This will clean install dependencies from package-lock.json
 
       - name: Build project
         run: npm run build
