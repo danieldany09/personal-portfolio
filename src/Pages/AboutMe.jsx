@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { FaCss3Alt, FaHtml5, FaJava, FaJs, FaNodeJs, FaReact,FaDocker } from 'react-icons/fa';
 import { SiNestjs,SiTypescript,SiMongodb,SiGoogleappsscript } from "react-icons/si";
 import { DiRedis } from "react-icons/di";

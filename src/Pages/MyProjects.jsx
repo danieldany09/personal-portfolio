@@ -9,7 +9,7 @@ export default function MyProjects() {
           <div className="section-header"><h2>My Projects</h2></div>
         </div>
         <div>
-          <a href={data.githubLink} target="_blank">
+          <a href={data.githubLink} target="_blank"  rel="noreferrer">
           <button className="btn btn-github">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ export default function MyProjects() {
               </div>
               <div className="portfolio-text">
               <p className="text-sm portfolio--link">
-                <a href={item.githublink} target="_blank">
+                <a href={item.githublink} target="_blank"  rel="noreferrer">
                 <button className="btn btn-github"> View in Github </button>
                 </a> 
               </p>

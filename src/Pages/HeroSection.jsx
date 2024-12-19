@@ -34,17 +34,17 @@ const HeroSection = () => {
         <a href='#AboutMe'>
             <button className="btn btn-primary">About Me </button>
         </a>
-        <a href={resume} target='_blank'>
+        <a href={resume} target='_blank' rel="noreferrer">
             <button className="btn btn-primary"> Open CV </button>
         </a>
         </div>
         <div>
         </div>
         <div className='hero--section--icons--list'>
-          <a href={data.githubLink} target='_blank'><FaGithub size='25px' className='hero--section--icon' /></a>
-          <a href={data.linkedInLink} target='_blank'><FaLinkedin size='25px' className='hero--section--icon' /></a>
-          <a href={data.leetcodeLink} target='_blank'><FaCode size='25px' className='hero--section--icon' /></a>
-          <a href={data.instagramLink} target='_blank'><FaInstagram size='25px' className='hero--section--icon' /></a>
+          <a href={data.githubLink} target='_blank'  rel="noreferrer"><FaGithub size='25px' className='hero--section--icon' /></a>
+          <a href={data.linkedInLink} target='_blank' rel="noreferrer"><FaLinkedin size='25px' className='hero--section--icon' /></a>
+          <a href={data.leetcodeLink} target='_blank' rel="noreferrer"><FaCode size='25px' className='hero--section--icon' /></a>
+          <a href={data.instagramLink} target='_blank' rel="noreferrer"><FaInstagram size='25px' className='hero--section--icon' /></a>
         </div>
         
         
