@@ -40,14 +40,14 @@ function Navbar() {
         </h4>
       </div>
 
-      <button
+      <a
         className={`nav__hamburger ${navActive ? "active" : ""}`}
         onClick={toggleNav}
       >
         <span className="nav__hamburger__line"></span>
         <span className="nav__hamburger__line"></span>
         <span className="nav__hamburger__line"></span>
-      </button>
+      </a>
       <div className={`navbar--items ${navActive ? "active" : ""}`}>
         <ul>
           <li>
