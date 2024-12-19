@@ -4,6 +4,7 @@ import HeroSection from '../HeroSection';
 import MyProjects from '../MyProjects';
 import Education from '../Education';
 import Experience from '../Experience';
+import Contact from '../Contact';
 
  
  const Home = () => {
@@ -14,6 +15,7 @@ import Experience from '../Experience';
         <MyProjects/>
         <Experience/>
         <Education/>
+        <Contact/>
      </>
    )
  }
