@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import data from "../constants/index.json";
 import { FaCode, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import axios from 'axios';
 
 const HeroSection = () => {
+  const [resume,setResume] = useState(null);
+  useEffect(()=>{
+    axios.get(`https://script.google.com/macros/s/${process.env.REACT_APP_API_KEY}/exec?function=getResume`)
+    .then(response=>{
+      const resumedata = response.data;
+      setResume(resumedata[1]);
+    })
+    .catch(error=>{
+      console.log("failed to get resume data",error)
+    })
+  },[]);
   return (
     <section id="heroSection" className="hero--section">
        
@@ -22,7 +34,7 @@ const HeroSection = () => {
         <a href='#AboutMe'>
             <button className="btn btn-primary">About Me </button>
         </a>
-        <a href='' target='_blank'>
+        <a href={resume} target='_blank'>
             <button className="btn btn-primary"> Open CV </button>
         </a>
         </div>
