@@ -42,10 +42,11 @@ const Contact = () => {
     const isEmpty = Array.from(formData.values()).every((value) => value.trim() === '');
     
     if(isEmpty) {
+      console.log(process.env)
       showAlert('Please fill in all the required fields', 'error');
       firstNameInput.current.focus();
     } else {
-      emailjs.sendForm('service_rcgkziz', 'template_57ffqnn', form.current, 'fFuV8gsegOvEPuqfv')
+      emailjs.sendForm('service_rcgkziz', 'template_57ffqnn', form.current,process.env.REACT_APP_EMAIL_API_KEY)
         .then((result) => {
           console.log(result.text);
           showAlert('Message sent successfully!', 'success');

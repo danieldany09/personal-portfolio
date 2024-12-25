@@ -2,7 +2,7 @@
     "projects": [
       {
         "id": "1",
-        "src": "./projectsImages/PlasticsImage.png",
+        "src": "./projectsImages/portfolio.png",
         "title": "Portfolio",
         "description": "A responsive and visually engaging portfolio website built to showcase my skills, projects, and achievements. ",
         "githublink":"https://github.com/danieldany09/personal-portfolio"
@@ -18,13 +18,15 @@
         "id": "3",
         "src": "./projectsImages/PlasticsImage.png",
         "title": "Plastic Ecommerce Website",
-        "description":"The plastic ecommerce website, built in React is a platform that enables users to buy and sell plastic-related products online."
+        "description":"The plastic ecommerce website, built in React is a platform that enables users to buy and sell plastic-related products online.",
+        "githublink":"https://github.com/danieldany09/plastics"
       },
       {
         "id": "4",
         "src": "./projectsImages/EyeDonorImage.png",
         "title": "Eye Donor Website",
-        "description":"An Eye Donor Website that would provide managing data of eye donor information across different cities"
+        "description":"An Eye Donor Website that would provide managing data of eye donor information across different cities",
+        "githublink":"https://github.com/danieldany09/Eyedonor"
       }
     ],
     "githubLink":"https://github.com/danieldany09/",
